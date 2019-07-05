@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "postcss-import": {},
+    "autoprefixer": {},
+    "postcss-font-magician": {
+      "variants": {
+        "Roboto": { "400": [], "700": [] },
+        "Oxygen": { "400": [] }
+      },
+      "display": "swap",
+      "foundries": ["google"]
+    }
+  }
+}

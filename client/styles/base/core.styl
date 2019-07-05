@@ -1,0 +1,29 @@
+@import "./font.styl"
+@import "./color.styl"
+
+// Override
+body
+  margin 0
+  background var(--color-window-background)
+  color var(--color-main-text)
+  font-size var(--root-font-size)
+  font-family $font-content
+
+  h1, h2, h3, h4, h5, h6, button, input, select, textarea
+    font-family $font-title
+
+  img
+    display block
+    margin 0 auto
+
+#app
+  overflow-x hidden
+
+// Util
+.title
+  margin 1em 0
+  font-weight bold
+  font-family $font-title
+
+.view
+  background var(--color-window-background)
