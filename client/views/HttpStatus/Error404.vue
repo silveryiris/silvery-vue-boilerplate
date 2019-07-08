@@ -44,7 +44,6 @@ export default {
   },
   data: () => ({
     mainImageUrl: "https://i.imgur.com/GRoqrOu.jpg"
-    //mainImageUrl: "https://test.com/GRoqrOu.jpg"
   })
 }
 </script>
