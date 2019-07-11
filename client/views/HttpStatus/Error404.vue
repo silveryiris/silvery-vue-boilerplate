@@ -5,8 +5,12 @@
     picture.http-error-404__cat-image
       source(:srcset="mainImageUrl" type="image/jpeg" )
       img(src="/img/default.jpg" alt="404 not found")
+
   section.http-error-404__section
     router-link.link(to="/") Go back to home page.
+
+  footer.http-error-404__footer
+    a.link(href="https://github.com/silveryiris/silvery-vue-boilerplate") Github
 </template>
 <style lang="stylus">
 .http-error-404
@@ -26,6 +30,9 @@
 
     img
       background var(--color-image-placeholder)
+
+  &__footer
+    text-align center
 
 @media screen and (max-width: 768px)
   .http-error-404

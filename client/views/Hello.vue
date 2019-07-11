@@ -4,6 +4,7 @@ main.hello.center-layout
     .hello__title.title Hello world!
     .hello__content This is a basic boilerplate page
     button.button.theme-switch__button(type="button" @click="toggleTheme") Switch Theme 
+    
   section.hello__section
     .hello__display
       .title Data Display
@@ -19,8 +20,12 @@ main.hello.center-layout
       p 
         | Current Theme : 
         span(:class="[{dark:(this.theme === 'dark')},{light:(this.theme === 'light')}]") {{ theme }}
+
   section.hello__section
     router-link.link(to="/404") 404 Not Found Page
+
+  section.hello__section
+    a.link(href="https://github.com/silveryiris/silvery-vue-boilerplate") Github
 </template>
 <style lang="stylus">
 .hello
