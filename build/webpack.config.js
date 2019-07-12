@@ -25,6 +25,15 @@ const webpackConfig = {
     rules: [
       { test: /\.vue$/, loader: "vue-loader", include: path.resolve(sourceDir) },
       {
+        test: /\.svg$/,
+        loader: "vue-svg-loader",
+        options: {
+          svgo: {
+            plugins: [{ removeDimensions: true }, { removeViewBox: false }]
+          }
+        }
+      },
+      {
         test: /\.js$/,
         loader: "babel-loader",
         include: path.resolve(sourceDir),
