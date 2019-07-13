@@ -7,7 +7,9 @@
       img(src="/img/default.jpg" alt="404 not found")
 
   section.http-error-404__section
-    router-link.link(to="/") Go back to home page.
+    router-link.link.http-error-404__go-home(to="/")
+      IconRocket.icon-svg
+      span Go back to home page.
 
   Footer
 </template>
@@ -30,6 +32,10 @@
     img
       background var(--color-image-placeholder)
 
+  &__go-home
+    display flex
+    justify-content center
+
 @media screen and (max-width: 768px)
   .http-error-404
     &__cat-image
@@ -41,13 +47,14 @@
 </style>
 <script>
 import Footer from "../../components/Footer.vue"
+import IconRocket from "@primer/octicons/build/svg/rocket.svg"
 
 export default {
   metaInfo: {
     titleTemplate: "%s - 404",
     meta: [{ name: "Description", content: "There is No content with this url, sorry." }]
   },
-  components: { Footer },
+  components: { Footer, IconRocket },
   data: () => ({
     mainImageUrl: "https://i.imgur.com/GRoqrOu.jpg"
   })
