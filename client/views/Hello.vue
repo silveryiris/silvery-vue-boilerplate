@@ -9,17 +9,17 @@ main.hello.center-layout
     
   section.hello__section
     .hello__display
-      .title Data Display
-      p 
+      .title.hello__list-title Data Display
+      .hello__list-item
         | Color Primary : 
         span.color--primary {{ primaryColor }}
-      p 
+      .hello__list-item
         | Color Accent : 
         span.color--accent {{ accentColor }}
-      p
+      .hello__list-item
         | Base Width : 
         span {{ baseWidth }}  
-      p 
+      .hello__list-item
         | Current Theme : 
         span(:class="[{dark:(this.theme === 'dark')},{light:(this.theme === 'light')}]") {{ theme }}
 
@@ -47,6 +47,15 @@ main.hello.center-layout
   &__content
     margin 0.75rem 0
     color var(--color-accent)
+
+  &__list-title
+    margin 1.5rem 0
+    font-size 1.25rem
+
+  &__list-item
+    display block
+    margin 1rem 0
+    padding 0 1.5rem
 
 @media screen and (max-width: 768px)
   .hello
