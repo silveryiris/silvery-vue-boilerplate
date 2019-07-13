@@ -4,7 +4,7 @@ main.hello.center-layout
     .hello__title.title Hello world!
     .hello__content This is a basic boilerplate page
     button.button.theme-switch__button(type="button" @click="toggleTheme")
-      IconPaintcan.svg-icon
+      IconPaintcan.icon-svg
       span Switch Theme 
     
   section.hello__section

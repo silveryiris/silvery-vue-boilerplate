@@ -3,7 +3,7 @@ footer.footer
   section.footer__source-section
     .footer__title Source
     a.link(href="https://github.com/silveryiris/silvery-vue-boilerplate")
-      IconMarkGithub.svg-icon.svg-icon--large.footer__icon
+      IconMarkGithub.icon-svg.icon-svg--large.footer__icon
 </template>
 <style lang="stylus">
 .footer
