@@ -9,8 +9,7 @@
   section.http-error-404__section
     router-link.link(to="/") Go back to home page.
 
-  footer.http-error-404__footer
-    a.link(href="https://github.com/silveryiris/silvery-vue-boilerplate") Github
+  Footer
 </template>
 <style lang="stylus">
 .http-error-404
@@ -31,9 +30,6 @@
     img
       background var(--color-image-placeholder)
 
-  &__footer
-    text-align center
-
 @media screen and (max-width: 768px)
   .http-error-404
     &__cat-image
@@ -44,11 +40,14 @@
         width 100%
 </style>
 <script>
+import Footer from "../../components/Footer.vue"
+
 export default {
   metaInfo: {
     titleTemplate: "%s - 404",
     meta: [{ name: "Description", content: "There is No content with this url, sorry." }]
   },
+  components: { Footer },
   data: () => ({
     mainImageUrl: "https://i.imgur.com/GRoqrOu.jpg"
   })

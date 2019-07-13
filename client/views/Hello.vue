@@ -3,7 +3,9 @@ main.hello.center-layout
   section.hello__section
     .hello__title.title Hello world!
     .hello__content This is a basic boilerplate page
-    button.button.theme-switch__button(type="button" @click="toggleTheme") Switch Theme 
+    button.button.theme-switch__button(type="button" @click="toggleTheme")
+      IconPaintcan.svg-icon
+      span Switch Theme 
     
   section.hello__section
     .hello__display
@@ -24,8 +26,7 @@ main.hello.center-layout
   section.hello__section
     router-link.link(to="/404") 404 Not Found Page
 
-  section.hello__section
-    a.link(href="https://github.com/silveryiris/silvery-vue-boilerplate") Github
+  Footer
 </template>
 <style lang="stylus">
 .hello
@@ -35,7 +36,7 @@ main.hello.center-layout
 
   &__display
     margin 0 auto
-    padding 0 1rem
+    padding 0
     width 250px
     text-align left
 
@@ -56,10 +57,15 @@ main.hello.center-layout
   .hello
     &__display
       width 100%
+
+    &__section
+      margin 1rem 0
 </style>
 <script>
 import ThemeManager from "../helpers/ThemeManager.js"
 import { mapState } from "vuex"
+import Footer from "../components/Footer.vue"
+import IconPaintcan from "@primer/octicons/build/svg/paintcan.svg"
 
 export default {
   metaInfo: {
@@ -90,6 +96,7 @@ export default {
     }
   },
   data: () => ({ innerWidth: null }),
+  components: { Footer, IconPaintcan },
   methods: {
     handleWindowResize() {
       this.innerWidth = window.innerWidth
