@@ -22,6 +22,8 @@
 # SVG Icon
 - [Octicons](https://octicons.github.com/) with svg inline
 
+![svg icon](https://i.imgur.com/Mi7q1WH.png)
+
 # Handy settings
 - 404 route handling.
 - 404 page view ready.
