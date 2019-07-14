@@ -1,5 +1,5 @@
 const state = {
-  theme: "fuck this"
+  theme: "default"
 }
 
 const actions = {
