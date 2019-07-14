@@ -72,7 +72,7 @@ const webpackConfig = {
       }
     ]
   },
-  output: { path: path.resolve("dist"), publicPath: "./", filename: "js/[name].[chunkhash:7].js" },
+  output: { path: path.resolve("dist"), publicPath: "/", filename: "js/[name].[chunkhash:7].js" },
   optimization: {
     minimizer: [new TerserPlugin(), new OptimizeCssPlugin()],
     runtimeChunk: "single",
